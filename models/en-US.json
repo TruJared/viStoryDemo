@@ -1,38 +1,76 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "greeter",
-      "types": [
-
-      ],
+      "invocationName": "mud crab life",
       "intents": [
         {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
           "name": "AMAZON.CancelIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
-          "name": "HelloWorldIntent",
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "MakeChoiceIntent",
           "slots": [
-
+            {
+              "name": "triggerWord",
+              "type": "TRIGGERWORD"
+            }
           ],
           "samples": [
-            "hello",
-            "say hello",
-            "say hello world"
+            "Go to {triggerWord}",
+            "I pick {triggerWord}",
+            "I choose {triggerWord}",
+            "{triggerWord}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "TRIGGERWORD",
+          "values": [
+            {
+              "name": {
+                "value": "the end"
+              }
+            },
+            {
+              "name": {
+                "value": "chapter 3"
+              }
+            },
+            {
+              "name": {
+                "value": "chapter 2"
+              }
+            },
+            {
+              "name": {
+                "value": "chapter 1"
+              }
+            }
           ]
         }
       ]

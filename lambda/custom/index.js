@@ -5,29 +5,37 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    const speechText = 'Welcome to the Alexa Skills Kit, you can say hello!';
+    const speechText = 'Welcome to the story. Say yes to begin your cool adventure.';
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('V.I. Story Demo', speechText)
       .getResponse();
   },
 };
 
-const HelloWorldIntentHandler = {
+const YesRequestHandler = {
   canHandle(handlerInput) {
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
     return (
       handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent'
+      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.YesIntent'
+      && !attributes.inGame
     );
   },
+
   handle(handlerInput) {
-    const speechText = 'Hello World!';
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    // set inGame true to "block" yesRequestHandler from firing.
+    attributes.inGame = true;
+
+    const speechText = 'This is chapter one. Your yes will no longer work here!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .reprompt(speechText)
+      .withSimpleCard('V.I. Story Demo', speechText)
       .getResponse();
   },
 };
@@ -98,7 +106,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    YesRequestHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,

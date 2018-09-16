@@ -1,4 +1,5 @@
 const Alexa = require('ask-sdk-core');
+const Helpers = require('./helpers');
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -24,13 +25,16 @@ const YesRequestHandler = {
       && !attributes.inGame
     );
   },
-
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
+
     // set inGame true to "block" yesRequestHandler from firing.
     attributes.inGame = true;
+    // get data for section and deconstruct objects
+    Helpers.sessionData(handlerInput);
 
-    const speechText = 'This is chapter one. Your yes will no longer work here!';
+    const { text, options } = attributes;
+    const speechText = text;
 
     return handlerInput.responseBuilder
       .speak(speechText)

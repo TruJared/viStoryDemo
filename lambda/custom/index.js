@@ -16,24 +16,41 @@ const LaunchRequestHandler = {
   },
 };
 
+const MakeChoiceHandler = {
+  canHandle(handlerInput) {
+    const { request } = handlerInput.requestEnvelope;
+    return request.type === 'IntentRequest' && request.intent.name === 'MakeChoiceIntent';
+  },
+  handle(handlerInput) {
+    const { request } = handlerInput.requestEnvelope;
+    const speechText = request.intent.slots.triggerWord.value;
+
+    // console.dir(request.intent.slots.triggerWord.value, false, null, true);
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('V.I. Story Demo', speechText)
+      .getResponse();
+  },
+};
+
 const YesRequestHandler = {
   canHandle(handlerInput) {
+    const { request } = handlerInput.requestEnvelope;
     const attributes = handlerInput.attributesManager.getSessionAttributes();
     return (
-      handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.YesIntent'
+      request.type === 'IntentRequest'
+      && request.intent.name === 'AMAZON.YesIntent'
       && !attributes.inGame
     );
   },
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
 
-    // set inGame true to "block" yesRequestHandler from firing.
-    attributes.inGame = true;
     // get data for section and deconstruct objects
     Helpers.sessionData(handlerInput);
-
-    const { text, options } = attributes;
+    const { text } = attributes;
     const speechText = text;
 
     return handlerInput.responseBuilder
@@ -111,6 +128,7 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     YesRequestHandler,
+    MakeChoiceHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,

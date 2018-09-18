@@ -1,7 +1,7 @@
 {
   "passages": [
     {
-      "text": "This is chapter 1. goto chapter 2 . goto chapter 3. goto the end",
+      "text": "This is chapter 1. go to chapter 2 . go to chapter 3. go to the end",
       "links": [
         {
           "name": "chapter 2",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "text": "this is chapter 2. goto chapter 1. goto chapter 3. the end.",
+      "text": "this is chapter 2. go to chapter 1. go to chapter 3. the end.",
       "links": [
         {
           "name": "chapter 1",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "text": "this is chapter 3. goto chapter 1 . goto chapter 2 . the end.",
+      "text": "this is chapter 3. go to chapter 1 . go to chapter 2 . the end.",
       "links": [
         {
           "name": "chapter 1",

@@ -10,13 +10,18 @@ const sessionData = (handlerInput) => {
   if (!attributes.inGame) {
     attributes.inGame = true;
     const passage = passages[0];
-
+    const { links } = passage;
     attributes.text = passage.text;
-    attributes.options = {
-      one: passage.links[0],
-      two: passage.links[1],
-      three: passage.links[2],
-    };
+
+    // build options object
+    attributes.options = {};
+    Object.entries(links).forEach(
+      ([key]) => (attributes.options[key] = {
+        name: links[key].name,
+        pid: links[key].pid,
+        inventoryItem: links[key].inventoryItem || false,
+      }),
+    );
   } else {
     const triggerWord = request.intent.slots.triggerWord.value;
     attributes.triggerWord = triggerWord;

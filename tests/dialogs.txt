@@ -1,4 +1,4 @@
 #LaunchRequest
 #AMAZON.RepeatIntent
 AMAZON.YesIntent
-? MakeChoiceIntent triggerWord=chapter%201
+#? MakeChoiceIntent triggerWord=chapter%201

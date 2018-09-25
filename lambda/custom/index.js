@@ -1,6 +1,7 @@
 const Alexa = require('ask-sdk-core');
 const Helpers = require('./helpers');
 
+// TODO add in welcome back message //
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
@@ -19,12 +20,19 @@ const LaunchRequestHandler = {
 const MakeChoiceHandler = {
   canHandle(handlerInput) {
     const { request } = handlerInput.requestEnvelope;
-    return request.type === 'IntentRequest' && request.intent.name === 'MakeChoiceIntent';
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+
+    return (
+      request.type === 'IntentRequest'
+      && attributes.inGame
+      && request.intent.name === 'MakeChoiceIntent'
+      // TODO add in request handler for  saying "yes" while in a game //
+      // || request.intent.name === 'AMAZON.YesIntent'
+    );
   },
   handle(handlerInput) {
     const { request } = handlerInput.requestEnvelope;
     const speechText = request.intent.slots.triggerWord.value;
-
     // console.dir(request.intent.slots.triggerWord.value, false, null, true);
 
     return handlerInput.responseBuilder

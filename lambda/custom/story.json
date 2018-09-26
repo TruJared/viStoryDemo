@@ -27,7 +27,7 @@
       }
     },
     {
-      "text": "this is chapter 2. go to chapter 1. go to chapter 3. the end.",
+      "text": "this is chapter 2. go to chapter 1. go to chapter 3. go to the end.",
       "inventoryItem": "hammer",
       "links": [
         {
@@ -63,7 +63,7 @@
       }
     },
     {
-      "text": "this is chapter 3. go to chapter 1 . go to chapter 2 . the end.",
+      "text": "this is chapter 3. go to chapter 1 . go to chapter 2 . go to the end.",
       "links": [
         {
           "name": "chapter 1",

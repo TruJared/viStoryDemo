@@ -3,6 +3,7 @@ const Story = require('./story.json');
 const { passages } = Story;
 
 const passageBuilder = (handlerInput) => {
+  // TODO figure out how to do endings //
   const attributes = handlerInput.attributesManager.getSessionAttributes();
   const { pid } = attributes.choices;
 

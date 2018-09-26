@@ -26,14 +26,15 @@ const MakeChoiceHandler = {
       request.type === 'IntentRequest'
       && attributes.inGame
       && request.intent.name === 'MakeChoiceIntent'
-      // TODO add in request handler for  saying "yes" while in a game //
+      // TODO add in request handler for saying "yes" while in a game //
       // || request.intent.name === 'AMAZON.YesIntent'
     );
   },
   handle(handlerInput) {
-    const { request } = handlerInput.requestEnvelope;
-    const speechText = request.intent.slots.triggerWord.value;
-    // console.dir(request.intent.slots.triggerWord.value, false, null, true);
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    Helpers.getNextPassage(handlerInput);
+    const { speechText } = attributes;
+    // todo handle choices as reprompt //
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -57,10 +58,9 @@ const YesRequestHandler = {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
 
     // get data for section and deconstruct objects
-    Helpers.sessionData(handlerInput);
-    const { text } = attributes;
-    const speechText = text;
-
+    Helpers.getNextPassage(handlerInput);
+    const { speechText } = attributes;
+    // todo handle choices as reprompt //
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)

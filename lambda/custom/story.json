@@ -28,6 +28,7 @@
     },
     {
       "text": "this is chapter 2. go to chapter 1. go to chapter 3. the end.",
+      "inventoryItem": "hammer",
       "links": [
         {
           "name": "chapter 1",

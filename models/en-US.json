@@ -58,17 +58,68 @@
             },
             {
               "name": {
-                "value": "chapter 3"
+                "value": "shaded path",
+                "synonyms": ["shaded", "path"]
               }
             },
             {
               "name": {
-                "value": "chapter 2"
+                "value": "sewer grate",
+                "synonyms": ["sewer", "grate"]
               }
             },
             {
               "name": {
-                "value": "chapter 1"
+                "value": "think",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "inspect",
+                "synonyms": ["inspect"]
+              }
+            },
+            {
+              "name": {
+                "value": "rugs",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "continue",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "castle",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "beach",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "talk",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "play",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "ocean",
+                "synonyms": []
               }
             }
           ]

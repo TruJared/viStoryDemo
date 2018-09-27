@@ -1,7 +1,7 @@
 {
   "passages": [
     {
-      "text": "You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but... that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surrounding you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You should probably head toward the <emphasis>shaded path</emphasis>, or perhaps the <emphasis>sewer grate</emphasis> can be a safe place to gather your thoughts. Or you can just sit here and <emphasis>think</emphasis> awhile.",
+      "text": "You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but... that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You should probably head toward the <emphasis>shaded path</emphasis>, or perhaps the <emphasis>sewer grate</emphasis> can be a safe place to gather your thoughts. Or you can just sit here and <emphasis>think</emphasis> awhile.",
       "links": [
         {
           "name": "shaded path",
@@ -225,9 +225,9 @@
       "special": ["win", "the-end"]
     }
   ],
-  "name": "mudcrabLife",
+  "name": "Mudcrab Life",
   "startnode": "1",
-  "creator": "Twine",
+  "creator": "Jared Truscott",
   "creator-version": "2.2.1",
   "ifid": "1AB0D127-C9A5-49B1-B333-A1B61F6AC1FB"
 }

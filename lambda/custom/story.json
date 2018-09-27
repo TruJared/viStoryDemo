@@ -1,7 +1,9 @@
+// TODO FINISH EDITING THIS FILE //
+
 {
   "passages": [
     {
-      "text": "You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but... that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You should probably head toward the <emphasis>shaded path</emphasis>, or perhaps the <emphasis>sewer grate</emphasis> can be a safe place to gather your thoughts. Or you can just sit here and <emphasis>think</emphasis> awhile.",
+      "text": "<audio src='soundbank://soundlibrary/nature/amzn_sfx_ocean_wave_surf_01'/>You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but... that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You should probably head toward the <emphasis>shaded path</emphasis>, or perhaps the <emphasis>sewer grate</emphasis> can be a safe place to gather your thoughts. Or you can just sit here and <emphasis>think</emphasis> awhile.",
       "links": [
         {
           "name": "shaded path",
@@ -25,7 +27,7 @@
         "x": "699",
         "y": "401"
       },
-      "special": ["inventory"]
+      "special": []
     },
     {
       "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time=\"1s\">rugs</break>.Do you <emphasis>inspect the rugs</emphasis> or <emphasis>continue</emphasis> toward the <emphasis>castle</emphasis>? You can also return to the <emphasis>beach</emphasis>.",
@@ -52,10 +54,10 @@
         "x": "503",
         "y": "302"
       },
-      "special": ["inventory"]
+      "special": []
     },
     {
-      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps coming up the grate. Or hear the sword being drawn by the escape prisoner. Ironically, you can relate to the words the stranger says outloud as he plunges his sword through your thick shell.** polly voice Brittish Male ** This has been one hell of a weird day. ",
+      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https: //s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/>",
       "name": "sewer grate",
       "pid": "3",
       "position": {
@@ -65,7 +67,7 @@
       "special": ["the-end"]
     },
     {
-      "text": "In retrospect, carrying a large shiny coin into the ocean wasn't such a great idea. But atleast the fish that spotted you was big enough that you were eaten in one giant gulp. ",
+      "text": "In retrospect, carrying a large shiny coin into the ocean wasn't such a great idea. But at least the fish that spotted you was big enough that you were eaten in one giant gulp.",
       "name": "ocean",
       "pid": "4",
       "position": {
@@ -75,7 +77,7 @@
       "special": ["the-end"]
     },
     {
-      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs. On the downside you are dead, on the plus side, your cooking skill went up by one.  ",
+      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs. On the downside you are dead, on the upside side, your cooking skill went up by one.  ",
       "name": "think",
       "pid": "5",
       "position": {
@@ -85,7 +87,7 @@
       "special": ["the-end"]
     },
     {
-      "text": "As you approach the cat-human you hear her say **voice female romanian** 'Khajitt has wares if you have coin.' When Khajitt notices you, she smiles, and seems genuinely interested in communicating with you. Do you <emphasis>talk</emphasis> to the creature or <emphasis>continue</emphasis> to the <emphasis>castle</emphais>?",
+      "text": "As you approach the cat-human you hear her say <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.b59eed86-cc41-40e9-99cc-4d35f17a4d21.mp3'/> Khajitt smiles and seems genuinely interested in communicating with you. Do you <emphasis>talk</emphasis> to the creature or <emphasis>continue</emphasis> to the <emphasis>castle</emphasis>?",
       "links": [
         {
           "name": "continue, castle",
@@ -104,7 +106,7 @@
         "x": "527",
         "y": "489"
       },
-      "special": ["inventory"]
+      "special": []
     },
     {
       "text": "if(has coin){bestEnding}else{ending}-- these are not choices --",
@@ -126,7 +128,7 @@
         "x": "202",
         "y": "599"
       },
-      "special": ["event", "inventory"]
+      "special": ["event"]
     },
     {
       "text": "Somehow the creatures explains that she wants to play a dice game with you. She appears to be offering you a very large shiny coin if you win! Will you play the game with the merchant.",
@@ -148,7 +150,7 @@
         "x": "414",
         "y": "642"
       },
-      "special": ["inventory"]
+      "special": []
     },
     {
       "text": "** roll the dice game: if crab rolls high win large coin if low Khajitt eats crab **From your understanding you are about to play a dice game. You're pretty sure that an equal or higher roll means you win the coin. You, however, are a little unclear on what happens if you lose.** roll dice **The creature rolls a $resultD6 and you roll a $resultD6. You win/lose.",
@@ -170,7 +172,7 @@
         "x": "569",
         "y": "763"
       },
-      "special": ["inventory", "event"]
+      "special": ["event"]
     },
     {
       "text": "Looks like gambling comes pretty naturally to a sophisticated mudcrab such as yourself. The creature looks both suprised and amused that you won. She rewards you with a large golden coin ** coin sound **. ** female voice romanian ** As promised.** Seeing as a mud crab has no pockets, you decide that you should get this money put safely away. Perhaps the <emphasis>castle</empasis> has a place you can store your coin or maybe you can find a place to hide the coin in the <emphasis>ocean</emphasis>?",

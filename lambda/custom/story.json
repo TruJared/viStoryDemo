@@ -107,7 +107,7 @@
       "special": []
     },
     {
-      "text": "if(has coin){bestEnding}else{ending}-- these are not choices --",
+      "text": "figure out what happens next...",
       "links": [
         {
           "name": "best ending",
@@ -126,7 +126,7 @@
         "x": "202",
         "y": "599"
       },
-      "special": ["event"]
+      "special": ["final"]
     },
     {
       "text": "Somehow the creatures explains that she wants to play a dice game with you. She appears to be offering you a very large shiny coin if you win! Will you play the game with the merchant.",

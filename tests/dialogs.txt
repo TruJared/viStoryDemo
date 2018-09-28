@@ -2,6 +2,7 @@
 #AMAZON.RepeatIntent
 AMAZON.YesIntent
 ? MakeChoiceIntent triggerWord=path
-? MakeChoiceIntent triggerWord=path
-? MakeChoiceIntent triggerWord=path
-? MakeChoiceIntent triggerWord=path
+? MakeChoiceIntent triggerWord=inspect
+? MakeChoiceIntent triggerWord=talk
+? MakeChoiceIntent triggerWord=play
+? MakeChoiceIntent triggerWord=castle

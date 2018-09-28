@@ -26,8 +26,6 @@ const MakeChoiceHandler = {
       request.type === 'IntentRequest'
       && attributes.inGame
       && request.intent.name === 'MakeChoiceIntent'
-      // TODO add in request handler for saying "yes" while in a game //
-      // || request.intent.name === 'AMAZON.YesIntent'
     );
   },
   handle(handlerInput) {
@@ -35,6 +33,7 @@ const MakeChoiceHandler = {
 
     Helpers.getNextPassage(handlerInput);
     const speechText = attributes.text;
+    console.log(JSON.stringify(attributes));
 
     // check if is end :(
     if (attributes.isEnd) {

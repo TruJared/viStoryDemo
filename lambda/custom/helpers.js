@@ -13,14 +13,16 @@ const specialEvent = (handlerInput, special) => {
       attributes.choices = [];
       attributes.text = passages[attributes.pid].text;
       attributes.isEnd = true;
+      console.log(JSON.stringify(attributes));
+
       break;
 
     case 'dice':
       attributes.choices = [];
-      attributes.text = passages[attributes.pid].text;
       attributes.isEnd = true;
 
-      const computerRoll = 1 + Math.floor(Math.random() * 6);
+      // TODO change computerRoll to d6 //
+      const computerRoll = 1 + Math.floor(Math.random() * 1);
       const playerRoll = 1 + Math.floor(Math.random() * 6);
       let resultText = '';
 
@@ -43,9 +45,12 @@ const specialEvent = (handlerInput, special) => {
           },
         ];
       }
+      console.log(`NPC rolls ${computerRoll} :::: Player rolls ${playerRoll}`);
 
-      attributes.text += `The Khajitt rolls a ${computerRoll} and you roll a ${playerRoll}. ${resultText}`;
+      attributes.text = `From your understanding you are about to play a dice game. You're pretty sure that an equal or higher roll means you win the coin. You, however, are a little unclear on what happens if you lose. <break time='500ms' />. The Khajitt rolls a ${computerRoll} and you roll a ${playerRoll}. ${resultText}`;
       break;
+
+      case ''
 
     // ! should never get here
     default:
@@ -59,9 +64,10 @@ const passageBuilder = (handlerInput) => {
 
   if (special.length > 0) {
     specialEvent(handlerInput, special);
+  } else {
+    attributes.choices = passages[attributes.pid].links;
+    attributes.text = passages[attributes.pid].text;
   }
-  attributes.choices = passages[attributes.pid].links;
-  attributes.text = passages[attributes.pid].text;
 };
 
 const getNextPassage = (handlerInput) => {

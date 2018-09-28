@@ -33,9 +33,19 @@ const MakeChoiceHandler = {
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
 
-    // get data for section and deconstruct objects
     Helpers.getNextPassage(handlerInput);
     const speechText = attributes.text;
+
+    // check if is end :(
+    if (attributes.isEnd) {
+      return handlerInput.responseBuilder
+        .speak(speechText)
+        .withSimpleCard('V.I. Story Demo', 'the end')
+        .getResponse();
+    }
+
+    // if not end :)
+    // deconstruct objects
     const { choices } = attributes;
     let repromptText = 'Here are your choices: ';
     choices.forEach(value => (repromptText += `| ${value.name} | `));

@@ -2,9 +2,64 @@ const Story = require('./story.json');
 
 const { passages } = Story;
 
+const specialEvent = (handlerInput, special) => {
+  const attributes = handlerInput.attributesManager.getSessionAttributes();
+  const event = special[0];
+  console.log(`in special event ${special}`);
+
+  // event controller, will eventually guide to other function calls
+  switch (event) {
+    case 'end' || 'event':
+      attributes.choices = [];
+      attributes.text = passages[attributes.pid].text;
+      attributes.isEnd = true;
+      break;
+
+    case 'dice':
+      attributes.choices = [];
+      attributes.text = passages[attributes.pid].text;
+      attributes.isEnd = true;
+
+      const computerRoll = 1 + Math.floor(Math.random() * 6);
+      const playerRoll = 1 + Math.floor(Math.random() * 6);
+      let resultText = '';
+
+      if (computerRoll > playerRoll) {
+        resultText = 'You lose! <break time="500ms" /> So it turns out the price of losing was being eaten by the creature. <audio src="https://s3.amazonaws.com/mudcrablife/polly.0aa50b3f-64e6-4d71-b772-777cccced6d5.mp3" />';
+      } else {
+        // win game and progress to next part of story
+        resultText = 'You win! <break time="500ms" /> Looks like gambling comes pretty naturally to a posh mudcrab such as yourself. The creature looks both surprised and amused that you won. She rewards you with a large golden coin as promised.<audio src="soundbank://soundlibrary/musical/amzn_sfx_bell_short_chime_01"/> Seeing as a mud crab has no pockets, you decide that you should get this money put safely away. Perhaps the castle has a place you can store your coin or maybe you can find a place to hide the coin in the ocean?';
+        attributes.isEnd = false;
+        attributes.choices = [
+          {
+            name: 'castle',
+            link: 'castle',
+            pid: '7',
+          },
+          {
+            name: 'ocean',
+            link: 'ocean',
+            pid: '4',
+          },
+        ];
+      }
+
+      attributes.text += `The Khajitt rolls a ${computerRoll} and you roll a ${playerRoll}. ${resultText}`;
+      break;
+
+    // ! should never get here
+    default:
+      console.log('something has gone terribly wrong');
+  }
+};
+
 const passageBuilder = (handlerInput) => {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  console.log(JSON.stringify(attributes));
+  const { special } = passages[attributes.pid];
+
+  if (special.length > 0) {
+    specialEvent(handlerInput, special);
+  }
   attributes.choices = passages[attributes.pid].links;
   attributes.text = passages[attributes.pid].text;
 };
@@ -21,8 +76,6 @@ const getNextPassage = (handlerInput) => {
     const { request } = handlerInput.requestEnvelope;
     const triggerWord = request.intent.slots.triggerWord.value;
     const { choices } = attributes;
-
-    // TODO check to make sure trigger word is valid //
     // find the correct pid
     choices.forEach((choice) => {
       if (choice.name === triggerWord) {

@@ -2,6 +2,7 @@
   "extends": "airbnb-base",
   "rules": {
     "no-console": 0,
-    "no-return-assign": 0
+    "no-return-assign": 0,
+    "no-case-declarations": 0
   }
 }

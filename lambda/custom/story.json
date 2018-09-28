@@ -28,7 +28,7 @@
       "special": []
     },
     {
-      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time='1s' />rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
+      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time='250ms' />rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
       "links": [
         {
           "name": "inspect",
@@ -55,14 +55,14 @@
       "special": []
     },
     {
-      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https: //s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/>",
+      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/>",
       "name": "grate",
       "pid": "3",
       "position": {
         "x": "1201",
         "y": "802"
       },
-      "special": ["the-end"]
+      "special": ["end"]
     },
     {
       "text": "In retrospect, carrying a large shiny coin into the ocean wasn't such a great idea. But at least the fish that spotted you was big enough that you were eaten in one giant gulp.",
@@ -72,17 +72,17 @@
         "x": "1190",
         "y": "402"
       },
-      "special": ["the-end"]
+      "special": ["end"]
     },
     {
-      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs <audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/>. On the downside you are dead, on the upside side, your cooking skill went up by one.",
+      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs. <audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/> On the downside you are dead, on the upside side, your cooking skill went up by one.",
       "name": "think",
       "pid": "5",
       "position": {
         "x": "1200",
         "y": "599"
       },
-      "special": ["the-end"]
+      "special": ["end"]
     },
     {
       "text": "As you approach the cat-human you hear her say <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.b59eed86-cc41-40e9-99cc-4d35f17a4d21.mp3'/> Khajitt smiles and seems genuinely interested in communicating with you. Do you talk to the creature or continue to the castle?",
@@ -151,7 +151,7 @@
       "special": []
     },
     {
-      "text": "** roll the dice game: if crab rolls high win large coin if low Khajitt eats crab **From your understanding you are about to play a dice game. You're pretty sure that an equal or higher roll means you win the coin. You, however, are a little unclear on what happens if you lose.** roll dice **The creature rolls a $resultD6 and you roll a $resultD6. You win/lose.",
+      "text": "From your understanding you are about to play a dice game. You're pretty sure that an equal or higher roll means you win the coin. You, however, are a little unclear on what happens if you lose. <break time='500ms' />",
       "links": [
         {
           "name": "you win",
@@ -170,7 +170,7 @@
         "x": "569",
         "y": "763"
       },
-      "special": ["event"]
+      "special": ["dice"]
     },
     {
       "text": "Looks like gambling comes pretty naturally to a posh mudcrab such as yourself. The creature looks both surprised and amused that you won. She rewards you with a large golden coin as promised.<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_short_chime_01'/> Seeing as a mud crab has no pockets, you decide that you should get this money put safely away. Perhaps the castle has a place you can store your coin or maybe you can find a place to hide the coin in the ocean?",
@@ -202,7 +202,7 @@
         "x": "1194",
         "y": "1006"
       },
-      "special": ["the-end"]
+      "special": ["end"]
     },
     {
       "text": "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw, which also happens to be carrying the largest coin they have ever seen. They notice that you are a posh mudcrab, and that you are, by mudcrab standards, extremely wealthy. You are immediately welcomed to their table and fitted with your own top hat and monocle. You are one of the mudcrab elite! <audio src='soundbank://soundlibrary/human/amzn_sfx_large_crowd_cheer_03'/> Tomorrow, you'll be joining the other mud crabs at their summer house, whatever that is.<audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.6d5ac991-ae83-455b-9e54-30eae73efb94.mp3' />",
@@ -212,7 +212,7 @@
         "x": "93",
         "y": "398"
       },
-      "special": ["win", "the-end", "need picture of posh mudcrab"]
+      "special": ["end", "need picture of posh mudcrab"]
     },
     {
       "text": "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw. They notice that you are a posh mudcrab, but your lack of money keeps you from joining their table. <audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02'/> They motion over at the help wanted sign at the cafe.<audio src='soundbank://soundlibrary/foley/amzn_sfx_kitchen_ambience_01'/> You decide it's probably about time you get a job.",
@@ -222,7 +222,7 @@
         "x": "94",
         "y": "806"
       },
-      "special": ["win", "the-end"]
+      "special": ["end"]
     }
   ],
   "name": "Mudcrab Life",

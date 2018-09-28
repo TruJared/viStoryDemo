@@ -1,7 +1,7 @@
 {
   "passages": [
     {
-      "text": "<audio src='soundbank://soundlibrary/nature/amzn_sfx_ocean_wave_surf_01'/>You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but, that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You can just sit here and think awhile.",
+      "text": "<audio src='soundbank://soundlibrary/nature/amzn_sfx_ocean_wave_surf_01'/>You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the hill, a cool breeze is coming from the grate. Behind you lies the ocean. It's such a nice day that you could just sit here and think for a while.",
       "links": [
         {
           "name": "path",
@@ -28,7 +28,7 @@
       "special": []
     },
     {
-      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time='250ms' />rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
+      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
       "links": [
         {
           "name": "inspect",
@@ -55,7 +55,7 @@
       "special": []
     },
     {
-      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/>",
+      "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps coming up the grate. <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/> The End.",
       "name": "grate",
       "pid": "3",
       "position": {
@@ -65,7 +65,7 @@
       "special": ["end"]
     },
     {
-      "text": "In retrospect, carrying a large shiny coin into the ocean wasn't such a great idea. But at least the fish that spotted you was big enough that you were eaten in one giant gulp.",
+      "text": "In retrospect, carrying a large shiny coin into the ocean wasn't such a great idea. But at least the fish that spotted you was big enough that you were eaten in one giant gulp. The End",
       "name": "ocean",
       "pid": "4",
       "position": {
@@ -75,7 +75,7 @@
       "special": ["end"]
     },
     {
-      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs. <audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/> On the downside you are dead, on the upside side, your cooking skill went up by one.",
+      "text": "Sometimes it pays to take time to think things through. However, this is not one of those times. As you sit there thinking in the shallow waters of the beach, the heat begins to steam you. At first this feels kind of nice, but your primitive mudcrab brain can't grasp the reality of the situation. Before long, you are a pile of steamed mudcrab legs. <audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_timer_01'/> On the downside you are dead, on the upside, your cooking skill went up by one. The End",
       "name": "think",
       "pid": "5",
       "position": {
@@ -129,7 +129,7 @@
       "special": ["final"]
     },
     {
-      "text": "Somehow the creatures explains that she wants to play a dice game with you. She appears to be offering you a very large shiny coin if you win! Will you play the game with the merchant.",
+      "text": "Somehow the creature explains that she wants to play a dice game with you. She appears to be offering you a very large shiny coin if you win! Will you play the game with the merchant.",
       "links": [
         {
           "name": "play",

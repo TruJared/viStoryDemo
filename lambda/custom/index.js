@@ -99,7 +99,7 @@ const HelpIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speechText = 'You can say hello to me!';
+    const speechText = 'Help is not currently set up';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -118,11 +118,11 @@ const CancelAndStopIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speechText = 'Goodbye!';
+    const speechText = 'Thanks for playing';
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('demo', speechText)
       .getResponse();
   },
 };
@@ -135,6 +135,24 @@ const SessionEndedRequestHandler = {
     console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
 
     return handlerInput.responseBuilder.getResponse();
+  },
+};
+
+const FallbackHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'AMAZON.FallbackIntent';
+  },
+  handle(handlerInput) {
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+    const { choices } = attributes;
+    let repromptText = 'Here are your choices: ';
+    choices.forEach(value => (repromptText += `| ${value.name} | `));
+
+    return handlerInput.responseBuilder
+      .speak(repromptText)
+      .reprompt(repromptText)
+      .withSimpleCard('V.I. Story Demo', repromptText)
+      .getResponse();
   },
 };
 
@@ -162,6 +180,7 @@ exports.handler = skillBuilder
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler,
+    FallbackHandler,
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();

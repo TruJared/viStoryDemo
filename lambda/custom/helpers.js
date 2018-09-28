@@ -4,18 +4,18 @@ const { passages } = Story;
 
 const passageBuilder = (handlerInput) => {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  console.log(attributes.pid);
+  console.log(JSON.stringify(attributes));
   attributes.choices = passages[attributes.pid].links;
   attributes.text = passages[attributes.pid].text;
 };
 
 const getNextPassage = (handlerInput) => {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  attributes.pid = 0;
 
   // if new game
   if (!attributes.inGame) {
     attributes.inGame = true;
+    attributes.pid = 0;
     // start the choice loops
   } else {
     const { request } = handlerInput.requestEnvelope;

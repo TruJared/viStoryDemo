@@ -28,7 +28,7 @@
       "special": []
     },
     {
-      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time=\"1s\">rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
+      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time='1s' />rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
       "links": [
         {
           "name": "inspect",
@@ -195,7 +195,7 @@
       "special": ["inventory:large-coin"]
     },
     {
-      "text": "So it turns out the price of losing was being eaten by the creature. <break time=\"500ms\"> <audio src=\"https://s3.amazonaws.com/mudcrablife/polly.0aa50b3f-64e6-4d71-b772-777cccced6d5.mp3\"/>",
+      "text": "So it turns out the price of losing was being eaten by the creature. <break time='500ms' /> <audio src='https://s3.amazonaws.com/mudcrablife/polly.0aa50b3f-64e6-4d71-b772-777cccced6d5.mp3' />",
       "name": "you lose",
       "pid": "11",
       "position": {
@@ -205,7 +205,7 @@
       "special": ["the-end"]
     },
     {
-      "text": "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw, which also happens to be carrying the largest coin they have ever seen. They notice that you are a posh mudcrab, and that you are, by mudcrab standards, extremely wealthy. You are immediately welcomed to their table and fitted with your own top hat and monocle. You are one of the mudcrab elite! <audio src='soundbank://soundlibrary/human/amzn_sfx_large_crowd_cheer_03'/> Tomorrow, you'll be joining the other mud crabs at their summer house, whatever that is.<audio src=\"https://s3.us-east-1.amazonaws.com/mudcrablife/polly.6d5ac991-ae83-455b-9e54-30eae73efb94.mp3\" />",
+      "text": "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw, which also happens to be carrying the largest coin they have ever seen. They notice that you are a posh mudcrab, and that you are, by mudcrab standards, extremely wealthy. You are immediately welcomed to their table and fitted with your own top hat and monocle. You are one of the mudcrab elite! <audio src='soundbank://soundlibrary/human/amzn_sfx_large_crowd_cheer_03'/> Tomorrow, you'll be joining the other mud crabs at their summer house, whatever that is.<audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.6d5ac991-ae83-455b-9e54-30eae73efb94.mp3' />",
       "name": "best ending",
       "pid": "12",
       "position": {

@@ -3,47 +3,35 @@ const Story = require('./story.json');
 const { passages } = Story;
 
 const passageBuilder = (handlerInput) => {
-  // TODO figure out how to do endings //
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  const { pid } = attributes.choices;
-
-  const passage = passages[pid - 1] || passages[0];
-  const { links } = passage;
-
-  attributes.inventoryItem = passage.inventoryItem || false;
-  attributes.speechText = passage.text;
-
-  // build choices object
-  Object.entries(links).forEach(
-    ([key]) => (attributes.choices[key] = {
-      name: links[key].name,
-      pid: links[key].pid,
-    }),
-  );
+  console.log(attributes.pid);
+  attributes.choices = passages[attributes.pid].links;
+  attributes.text = passages[attributes.pid].text;
 };
 
 const getNextPassage = (handlerInput) => {
   const attributes = handlerInput.attributesManager.getSessionAttributes();
-  const { request } = handlerInput.requestEnvelope;
+  attributes.pid = 0;
 
   // if new game
   if (!attributes.inGame) {
     attributes.inGame = true;
-    attributes.choices = {};
-    passageBuilder(handlerInput);
+    // start the choice loops
   } else {
+    const { request } = handlerInput.requestEnvelope;
     const triggerWord = request.intent.slots.triggerWord.value;
     const { choices } = attributes;
 
     // TODO check to make sure trigger word is valid //
     // find the correct pid
-    Object.entries(choices).forEach(([key]) => {
-      if (choices[key].name === triggerWord) {
-        choices.pid = choices[key].pid;
+    choices.forEach((choice) => {
+      if (choice.name === triggerWord) {
+        // * need -1 to offset at PID starts at 1
+        attributes.pid = choice.pid - 1;
       }
-      passageBuilder(handlerInput);
     });
   }
+  passageBuilder(handlerInput);
 };
 
 module.exports = { getNextPassage };

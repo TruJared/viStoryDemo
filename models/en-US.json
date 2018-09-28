@@ -58,14 +58,14 @@
             },
             {
               "name": {
-                "value": "shaded path",
-                "synonyms": ["shaded", "path"]
+                "value": "path",
+                "synonyms": []
               }
             },
             {
               "name": {
-                "value": "sewer grate",
-                "synonyms": ["sewer", "grate"]
+                "value": "sewer",
+                "synonyms": []
               }
             },
             {

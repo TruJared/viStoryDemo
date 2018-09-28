@@ -1,16 +1,16 @@
 {
   "passages": [
     {
-      "text": "<audio src='soundbank://soundlibrary/nature/amzn_sfx_ocean_wave_surf_01'/>You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but... that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You should probably head toward the <emphasis>shaded path</emphasis>, or perhaps the <emphasis>sewer grate</emphasis> can be a safe place to gather your thoughts. Or you can just sit here and <emphasis>think</emphasis> awhile.",
+      "text": "<audio src='soundbank://soundlibrary/nature/amzn_sfx_ocean_wave_surf_01'/>You awaken on a beach. You're not entirely sure how you got here. You're a mudcrab, but, that's really about all you know. It's hot. You know you don't like being hot. Perhaps some shade would be nice. As you scan your surroundings you see a castle in the far off distance with a shaded path leading up to it. Closer to you is a sewer grate built into the side of the wall, a cool breeze is coming from the grate. Behind you lies the ocean. You can just sit here and think awhile.",
       "links": [
         {
-          "name": "shaded path",
-          "link": "shaded path",
+          "name": "path",
+          "link": "path",
           "pid": "2"
         },
         {
-          "name": "sewer grate",
-          "link": "sewer grate",
+          "name": "sewer",
+          "link": "sewer",
           "pid": "3"
         },
         {
@@ -28,16 +28,16 @@
       "special": []
     },
     {
-      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time=\"1s\">rugs</break>.Do you <emphasis>inspect the rugs</emphasis> or <emphasis>continue</emphasis> toward the <emphasis>castle</emphasis>? You can also return to the <emphasis>beach</emphasis>.",
+      "text": "As you make your way to the castle you see an odd cat-like creature standing along the road. As you get closer you notice that this creature is stands on it's hind legs and has an almost human aspect to it. You realize this creature is selling <break time=\"1s\">rugs. Do you inspect the rugs or continue toward the castle? You can also return to the beach.",
       "links": [
         {
-          "name": "inspect, rugs",
-          "link": "inspect, rugs",
+          "name": "inspect",
+          "link": "inspect",
           "pid": "6"
         },
         {
-          "name": "continue, castle",
-          "link": "continue, castle",
+          "name": "castle",
+          "link": "castle",
           "pid": "7"
         },
         {
@@ -46,7 +46,7 @@
           "pid": "1"
         }
       ],
-      "name": "shaded path",
+      "name": "path",
       "pid": "2",
       "position": {
         "x": "503",
@@ -56,7 +56,7 @@
     },
     {
       "text": "The sewer grate greets you with a cool refreshing breeze. It's peaceful here. You feel safe. Perhaps that was why you didn't hear the footsteps <audio src='soundbank://soundlibrary/human/amzn_sfx_human_walking_01'/> coming up the grate. Or hear the sword being drawn by the escape prisoner. <audio src='soundbank://soundlibrary/foley/amzn_sfx_swoosh_fast_1x_01'/> Ironically, you can relate to the words the stranger says out loud as he plunges his sword through your thick shell. <audio src='https: //s3.us-east-1.amazonaws.com/mudcrablife/polly.7027ac26-0760-4c84-85d7-2afc52028603.mp3'/>",
-      "name": "sewer grate",
+      "name": "grate",
       "pid": "3",
       "position": {
         "x": "1201",
@@ -85,11 +85,11 @@
       "special": ["the-end"]
     },
     {
-      "text": "As you approach the cat-human you hear her say <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.b59eed86-cc41-40e9-99cc-4d35f17a4d21.mp3'/> Khajitt smiles and seems genuinely interested in communicating with you. Do you <emphasis>talk</emphasis> to the creature or <emphasis>continue</emphasis> to the <emphasis>castle</emphasis>?",
+      "text": "As you approach the cat-human you hear her say <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.b59eed86-cc41-40e9-99cc-4d35f17a4d21.mp3'/> Khajitt smiles and seems genuinely interested in communicating with you. Do you talk to the creature or continue to the castle?",
       "links": [
         {
-          "name": "continue, castle",
-          "link": "continue, castle",
+          "name": "castle",
+          "link": "castle",
           "pid": "7"
         },
         {
@@ -98,7 +98,7 @@
           "pid": "8"
         }
       ],
-      "name": "inspect, rugs",
+      "name": "rugs",
       "pid": "6",
       "position": {
         "x": "527",
@@ -120,7 +120,7 @@
           "pid": "13"
         }
       ],
-      "name": "continue, castle",
+      "name": "castle",
       "pid": "7",
       "position": {
         "x": "202",
@@ -132,13 +132,13 @@
       "text": "Somehow the creatures explains that she wants to play a dice game with you. She appears to be offering you a very large shiny coin if you win! Will you play the game with the merchant.",
       "links": [
         {
-          "name": "yes, play",
-          "link": "yes, play",
+          "name": "play",
+          "link": "play",
           "pid": "9"
         },
         {
-          "name": "continue, castle",
-          "link": "continue, castle",
+          "name": "castle",
+          "link": "castle",
           "pid": "7"
         }
       ],
@@ -164,7 +164,7 @@
           "pid": "11"
         }
       ],
-      "name": "yes, play",
+      "name": "play",
       "pid": "9",
       "position": {
         "x": "569",
@@ -173,11 +173,11 @@
       "special": ["event"]
     },
     {
-      "text": "Looks like gambling comes pretty naturally to a posh mudcrab such as yourself. The creature looks both surprised and amused that you won. She rewards you with a large golden coin as promised.<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_short_chime_01'/> Seeing as a mud crab has no pockets, you decide that you should get this money put safely away. Perhaps the <emphasis>castle</emphasis> has a place you can store your coin or maybe you can find a place to hide the coin in the <emphasis>ocean</emphasis>?",
+      "text": "Looks like gambling comes pretty naturally to a posh mudcrab such as yourself. The creature looks both surprised and amused that you won. She rewards you with a large golden coin as promised.<audio src='soundbank://soundlibrary/musical/amzn_sfx_bell_short_chime_01'/> Seeing as a mud crab has no pockets, you decide that you should get this money put safely away. Perhaps the castle has a place you can store your coin or maybe you can find a place to hide the coin in the ocean?",
       "links": [
         {
-          "name": "continue, castle",
-          "link": "continue, castle",
+          "name": "castle",
+          "link": "castle",
           "pid": "7"
         },
         {
@@ -212,7 +212,7 @@
         "x": "93",
         "y": "398"
       },
-      "special": ["win", "the-end"]
+      "special": ["win", "the-end", "need picture of posh mudcrab"]
     },
     {
       "text": "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw. They notice that you are a posh mudcrab, but your lack of money keeps you from joining their table. <audio src='soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02'/> They motion over at the help wanted sign at the cafe.<audio src='soundbank://soundlibrary/foley/amzn_sfx_kitchen_ambience_01'/> You decide it's probably about time you get a job.",

@@ -32,14 +32,21 @@ const MakeChoiceHandler = {
   },
   handle(handlerInput) {
     const attributes = handlerInput.attributesManager.getSessionAttributes();
+
+    // get data for section and deconstruct objects
     Helpers.getNextPassage(handlerInput);
-    const { speechText } = attributes;
-    // todo handle choices as reprompt //
+    const speechText = attributes.text;
+    const { choices } = attributes;
+    let repromptText = 'Here are your choices: ';
+    choices.forEach(value => (repromptText += `| ${value.name} | `));
+
+    // console.dir(attributes, false, null, true);
+    // console.dir(repromptText, false, null, true);
 
     return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(speechText)
-      .withSimpleCard('V.I. Story Demo', speechText)
+      .speak(`${speechText} ${repromptText}`)
+      .reprompt(repromptText)
+      .withSimpleCard('V.I. Story Demo', repromptText)
       .getResponse();
   },
 };
@@ -59,12 +66,18 @@ const YesRequestHandler = {
 
     // get data for section and deconstruct objects
     Helpers.getNextPassage(handlerInput);
-    const { speechText } = attributes;
-    // todo handle choices as reprompt //
+    const speechText = attributes.text;
+    const { choices } = attributes;
+    let repromptText = 'Here are your choices: ';
+    choices.forEach(value => (repromptText += `| ${value.name} | `));
+
+    // console.dir(attributes, false, null, true);
+    // console.dir(repromptText, false, null, true);
+
     return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(speechText)
-      .withSimpleCard('V.I. Story Demo', speechText)
+      .speak(`${speechText} ${repromptText}`)
+      .reprompt(repromptText)
+      .withSimpleCard('V.I. Story Demo', repromptText)
       .getResponse();
   },
 };

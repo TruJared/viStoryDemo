@@ -10,6 +10,7 @@ const specialEvent = (handlerInput, special) => {
   // event controller, will eventually guide to other function calls
   switch (event) {
     case 'end' || 'event':
+      // TODO add play again option //
       attributes.choices = [];
       attributes.text = passages[attributes.pid].text;
       attributes.isEnd = true;
@@ -21,7 +22,7 @@ const specialEvent = (handlerInput, special) => {
       attributes.isEnd = true;
 
       // TODO change computerRoll to d6 //
-      const computerRoll = 1 + Math.floor(Math.random() * 1);
+      const computerRoll = 1 + Math.floor(Math.random() * 6);
       const playerRoll = 1 + Math.floor(Math.random() * 6);
       let resultText = '';
 
@@ -54,8 +55,9 @@ const specialEvent = (handlerInput, special) => {
       attributes.choices = [];
       attributes.isEnd = true;
 
+      // TODO add posh mudcrab image to card //
       if (attributes.inventory.item) {
-        attributes.text = "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw, which also happens to be carrying the largest coin they have ever seen. They notice that you are a posh mudcrab, and that you are, by mudcrab standards, extremely wealthy. You are immediately welcomed to their table and fitted with your own top hat and monocle. You are one of the mudcrab elite! <audio src='soundbank://soundlibrary/human/amzn_sfx_large_crowd_cheer_03'/> Tomorrow, you'll be joining the other mud crabs at their summer house, whatever that is.<audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.6d5ac991-ae83-455b-9e54-30eae73efb94.mp3' /> <break time='500ms' />";
+        attributes.text = "You arrive at the castle and instantly you are overwhelmed at how huge this place is. <audio src='soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03'/> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.<audio src='soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01'/> They are all wearing monocles and top hats. You greet them with a wave of your claw, which also happens to be carrying the largest coin they have ever seen. They notice that you are a posh mudcrab, and that you are, by mudcrab standards, extremely wealthy. You are immediately welcomed to their table and fitted with your own top hat and monocle. You are one of the mudcrab elite! <audio src='soundbank://soundlibrary/human/amzn_sfx_large_crowd_cheer_03'/> Tomorrow, you'll be joining the other mud crabs at their summer house, whatever that is.<break time='500ms' /> <audio src='https://s3.us-east-1.amazonaws.com/mudcrablife/polly.6d5ac991-ae83-455b-9e54-30eae73efb94.mp3' /> ";
       } else {
         attributes.text = "You arrive at the castle and instantly you are overwhelmed at how huge this place is. < audio src = 'soundbank://soundlibrary/musical/amzn_sfx_trumpet_bugle_03' /> Like an entire sequel could be written just about your adventures here! As you wonder around the castle you see a group of mud crabs at a caffe drinking some sort of steaming brown liquid.< audio src = 'soundbank://soundlibrary/human/amzn_sfx_drinking_slurp_01' /> They are all wearing monocles and top hats.You greet them with a wave of your claw.They notice that you are a posh mudcrab, but your lack of money keeps you from joining their table. < audio src = 'soundbank://soundlibrary/ui/gameshow/amzn_ui_sfx_gameshow_negative_response_02' /> They motion over at the help wanted sign at the cafe.< audio src = 'soundbank://soundlibrary/foley/amzn_sfx_kitchen_ambience_01' /> You decide it's probably about time you get a job.";
       }

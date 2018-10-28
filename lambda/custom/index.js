@@ -1,4 +1,4 @@
-const Alexa = require('ask-sdk-core');
+const Alexa = require('ask-sdk');
 const Helpers = require('./helpers');
 
 // TODO add in welcome back message //

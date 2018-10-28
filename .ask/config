@@ -1,14 +1,14 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "amzn1.ask.skill.9b3cc96e-d394-44b7-9e4c-0f7879088d93",
+      "skill_id": "amzn1.ask.skill.3ca92ba5-ad1c-4e73-b210-c3174d50799a",
       "was_cloned": false,
       "merge": {
         "manifest": {
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-custom-viStoryDemo-default"
+                "uri": "ask-custom-viStoryDemo-V2-default"
               }
             }
           }
@@ -16,22 +16,22 @@
       },
       "resources": {
         "manifest": {
-          "eTag": "cb5a1a3fbc1b999af663760837d6338f"
+          "eTag": "cc9754edf7ec25dec9978274dc22dcd4"
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "a42eae006de70a8413ee91b8710fe585"
+            "eTag": "bb2861c209dd26b29b094094ed6b4cbe"
           }
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:us-east-1:139829371454:function:ask-custom-viStoryDemo-default",
-            "functionName": "arn:aws:lambda:us-east-1:139829371454:function:ask-custom-viStoryDemo-default",
+            "arn": "arn:aws:lambda:us-east-1:139829371454:function:ask-custom-viStoryDemo-V2-default",
+            "functionName": "ask-custom-viStoryDemo-V2-default",
             "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "d5cb56f1-717d-4b16-bec7-62841134b1ca"
+            "revisionId": "5c440b88-fd83-41fd-9c88-88d667fb94a6"
           }
         ]
       }
